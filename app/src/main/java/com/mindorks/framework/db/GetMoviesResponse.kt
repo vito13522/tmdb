@@ -1,7 +1,9 @@
 package com.mindorks.framework.db
 
+import com.google.gson.annotations.SerializedName
+
 data class GetMoviesResponse(
-    val page: Int,
-    val movies: List<Movie>,
-    val pages: Int
+    @SerializedName("page") val page: Int,
+    @SerializedName("results") val movies: List<Movie>,
+    @SerializedName("total_pages") val pages: Int
 )
